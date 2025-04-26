@@ -34,3 +34,20 @@ function showSuccessPopup() {
     }, 3000);
 }
 
+function searchCars() {
+  const input = document.getElementById("search-input").value.toLowerCase();
+  const carItems = document.querySelectorAll(".car-item");
+
+  carItems.forEach(car => {
+      const carText = car.textContent.toLowerCase();
+      if (carText.includes(input)) {
+          car.style.display = "block"; 
+      } else {
+          car.style.display = "none"; 
+      }
+  });
+  const carList = document.querySelector(".car-list");
+    if (!hasVisibleItems) {
+        carList.innerHTML = "<p>Không tìm thấy xe nào phù hợp.</p>";
+    }
+}

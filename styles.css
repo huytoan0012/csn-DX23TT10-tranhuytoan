@@ -101,7 +101,7 @@ nav ul li a {
 }
 
 .car-item img:hover {
-    transform: scale(7.0);
+    transform: scale(5.0);
 }
 
 #search-button {
@@ -142,9 +142,9 @@ nav ul li a {
     left: 91%;
     transform: translate(-50%, -50%);
     background-color: #f9f9f9; 
-    color: #333; 
+    color: #333;
     border: 2px solid #007bff; 
-    border-radius: 10px;
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     width: 300px;
     text-align: center;
@@ -161,7 +161,7 @@ nav ul li a {
 }
 
 .popup-content .close:hover {
-    color: #b00015;
+    color: #b00015; 
 }
 
 .order-button {
@@ -214,19 +214,19 @@ nav ul li a {
         opacity: 0; 
     }
     100% {
-        opacity: 1; 
+        opacity: 1;
     }
 }
 
 .blinking-price {
-    animation: blink 1s infinite;
+    animation: blink 1s infinite; 
     color: rgb(10, 228, 28); 
     font-weight: bold; 
 }
 .blinking {
-    animation: blink 1s infinite; 
+    animation: blink 1s infinite;
     color: #FF5722; 
-    font-weight: bold; 
+    font-weight: bold;
 
 }
 
@@ -394,7 +394,7 @@ h1 {
     position: fixed; 
     top: 32%; 
     transform: translateY(-50%); 
-    z-index: 1; 
+    z-index: 1;
 }
 
 .ad-left {
@@ -413,24 +413,24 @@ h1 {
 .ad-left img,
 .ad-right img {
     width: 290px; 
-    height: auto;
+    height: auto; 
     border: none; 
     border-radius: 5px; 
     box-shadow: none; 
 }
 .special-price {
     color: #FF5722; 
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 14px; 
     padding: 5px 10px; 
     border: 2px solid #FF5722(0, 255, 21); 
     border-radius: 5px; 
-    background-color: #FF5722(43, 255, 0, 0.1);
+    background-color: #FF5722(43, 255, 0, 0.1); 
     display: inline-block; 
     animation: pulse 1.5s infinite; 
 }
 
-
+/* Hiệu ứng động (tùy chọn) */
 @keyframes pulse {
     0% {
         box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
@@ -445,9 +445,9 @@ h1 {
 .header-flex {
     display: flex; 
     align-items: center; 
-    justify-content: space-between; 
+    justify-content: space-between;
     position: relative;
-    padding: 1px 30px 1px 30px; 
+    padding: 1px 30px 1px 30px;
 }
 
 .header-flex h1 {
@@ -460,8 +460,8 @@ h1 {
     align-items: center; 
     gap: 6px; 
     margin-top: 8px; 
-    position: absolute;
-    top: 12px;
+    position: absolute; 
+    top: 12px; 
     left: 300px; 
     z-index: 10; 
 }
