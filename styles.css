@@ -135,17 +135,17 @@ nav ul li a {
 }
 
 .popup {
-    display: none; /* Ẩn popup mặc định */
+    display: none; 
     position: fixed;
     z-index: 1000;
     top: 70%;
     left: 91%;
     transform: translate(-50%, -50%);
-    background-color: #f9f9f9; /* Nền sáng */
-    color: #333; /* Màu chữ tối */
-    border: 2px solid #007bff; /* Viền xanh dương */
-    border-radius: 10px; /* Bo góc */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    background-color: #f9f9f9; 
+    color: #333; 
+    border: 2px solid #007bff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     width: 300px;
     text-align: center;
     
@@ -157,11 +157,11 @@ nav ul li a {
     right: 12px;
     font-size: 22px;
     cursor: pointer;
-    color: #d0021b; /* Màu đỏ cho nút đóng */
+    color: #d0021b; 
 }
 
 .popup-content .close:hover {
-    color: #b00015; /* Đổi màu khi hover */
+    color: #b00015;
 }
 
 .order-button {
@@ -208,25 +208,25 @@ nav ul li a {
 
 @keyframes blink {
     0% {
-        opacity: 1; /* Hiển thị chữ */
+        opacity: 1; 
     }
     50% {
-        opacity: 0; /* Ẩn chữ */
+        opacity: 0; 
     }
     100% {
-        opacity: 1; /* Hiển thị lại chữ */
+        opacity: 1; 
     }
 }
 
 .blinking-price {
-    animation: blink 1s infinite; /* Áp dụng hiệu ứng chớp nháy */
-    color: rgb(10, 228, 28); /* Màu chữ (tùy chỉnh) */
-    font-weight: bold; /* Làm chữ đậm */
+    animation: blink 1s infinite;
+    color: rgb(10, 228, 28); 
+    font-weight: bold; 
 }
 .blinking {
-    animation: blink 1s infinite; /* Dừng hiệu ứng khi hover */
-    color: #FF5722; /* Màu chữ khi hover (tùy chỉnh) */
-    font-weight: bold; /* Làm chữ đậm */
+    animation: blink 1s infinite; 
+    color: #FF5722; 
+    font-weight: bold; 
 
 }
 
@@ -391,46 +391,46 @@ h1 {
 
 .ad-left,
 .ad-right {
-    position: fixed; /* Cố định vị trí */
-    top: 32%; /* Căn giữa theo chiều dọc */
-    transform: translateY(-50%); /* Dịch chuyển để căn giữa */
-    z-index: 1; /* Đảm bảo quảng cáo nằm trên nội dung */
+    position: fixed; 
+    top: 32%; 
+    transform: translateY(-50%); 
+    z-index: 1; 
 }
 
 .ad-left {
-    left: 1px; /* Cách mép trái 10px */
-    size: 100px; /* Kích thước quảng cáo (tùy chỉnh) */
-    height: 100px; /* Kích thước quảng cáo (tùy chỉnh) */
+    left: 1px; 
+    size: 100px; 
+    height: 100px; 
     
 }
 
 .ad-right {
-    right: 1px; /* Cách mép trái 10px */
-    size: 100px; /* Kích thước quảng cáo (tùy chỉnh) */
+    right: 1px; 
+    size: 100px; 
     height: 100px;
 }
 
 .ad-left img,
 .ad-right img {
-    width: 290px; /* Tăng kích thước chiều rộng */
-    height: auto; /* Giữ tỷ lệ hình ảnh */
-    border: none; /* Viền quảng cáo (tùy chọn) */
-    border-radius: 5px; /* Bo góc (tùy chọn) */
-    box-shadow: none; /* Hiệu ứng đổ bóng */
+    width: 290px; 
+    height: auto;
+    border: none; 
+    border-radius: 5px; 
+    box-shadow: none; 
 }
 .special-price {
-    color: #FF5722; /* Màu chữ */
-    font-weight: bold; /* Làm chữ đậm */
-    font-size: 14px; /* Kích thước chữ */
-    padding: 5px 10px; /* Khoảng cách bên trong */
-    border: 2px solid #FF5722(0, 255, 21); /* Viền màu đỏ */
-    border-radius: 5px; /* Bo góc viền */
-    background-color: #FF5722(43, 255, 0, 0.1); /* Nền mờ */
-    display: inline-block; /* Đảm bảo viền bao quanh chữ */
-    animation: pulse 1.5s infinite; /* Hiệu ứng động */
+    color: #FF5722; 
+    font-weight: bold; 
+    font-size: 14px; 
+    padding: 5px 10px; 
+    border: 2px solid #FF5722(0, 255, 21); 
+    border-radius: 5px; 
+    background-color: #FF5722(43, 255, 0, 0.1);
+    display: inline-block; 
+    animation: pulse 1.5s infinite; 
 }
 
-/* Hiệu ứng động (tùy chọn) */
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
@@ -443,11 +443,11 @@ h1 {
     }
 }
 .header-flex {
-    display: flex; /* Sắp xếp các phần tử con trên 1 hàng */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    justify-content: space-between; /* Đẩy các phần tử ra 2 bên */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
     position: relative;
-    padding: 1px 30px 1px 30px; /* Padding trái/phải cho đẹp */
+    padding: 1px 30px 1px 30px; 
 }
 
 .header-flex h1 {
@@ -456,14 +456,14 @@ h1 {
 }
 
 .header-phone {
-    display: flex; /* Căn các phần tử con nằm ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 6px; /* Khoảng cách giữa icon và số điện thoại */
-    margin-top: 8px; /* Cách phía trên 8px */
-    position: absolute; /* Đặt vị trí tuyệt đối trong header */
-    top: 12px; /* Cách phía trên 8px */
-    left: 300px; /* Cách mép phải 40px (giảm giá trị để dịch sang trái) */
-    z-index: 10; /* Đảm bảo nổi trên nền header */
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    margin-top: 8px; 
+    position: absolute;
+    top: 12px;
+    left: 300px; 
+    z-index: 10; 
 }
 
 .phone-icon {
