@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Website Mua Bán Ô Tô</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Auto ToanTran </h1><nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cars.html">Xe Mới </a></li>
+                <li><a href="carss.html">Xe Cũ </a></li>
+                <li><a href="#" onclick="togglePopup()">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="khung">
+        <div class="order-container">
+            <h1>Thông tin khách hàng</h1>
+            
+            <form class="order-form" onsubmit="event.preventDefault(); showSuccessPopup();">
+                <div class="gender-selection">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male"> Anh
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female"> Chị
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="fullname">Họ & Tên</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Địa chỉ</label>    
+                    <input type="text" id="price" name="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="car">Chọn xe</label>
+                    <input type="text" id="price" name="Xe" required>
+                    
+                </div>        
+    
+                <div class="form-group">
+                    <label for="note">Ghi chú thêm (Không bắt buộc)</label>
+                    <textarea id="note" name="note" rows="3"></textarea>
+                </div>
+                <h2 class="small-text">Chúng tôi sẽ liên hệ với quý khách một cách nhanh nhất</h2>                
+                                                                                            
+                <button type="submit" class="submit-btn">Hoàn tất đặt hàng</button>
+
+
+                
+            </form>
+        </div>
+    
+        
+
+    </section>
+    <div id="success-popup" class="popup1">
+        <div class="popup-content">
+            <div class="popup-icon">✓</div>
+            <h3>Đặt hàng thành công!</h3>
+            <p>Cảm ơn bạn đã đặt hàng. Chúng tôi sẽ liên hệ với bạn sớm.</p>
+        </div>
+    </div>
+    <div id="contact-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <h3>Thông tin liên hệ</h3>
+            <p>📧 Gmail: <a href="mailto:HuytoanAuto@gmail.com">HuytoanAuto@gmail.com</a></p>
+            <p>📱 Zalo: <a href="tel:0869859999">0869859999</a></p>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

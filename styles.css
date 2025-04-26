@@ -1,0 +1,484 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    text-align: center;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1px;
+}
+header h1 {
+    color:#fcd34d;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #007bff, #00c2ff);
+    color: white;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 45px;
+    column-gap: 150px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-item {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.car-item .car-info {
+    flex: 1;
+    grid-column: 1;
+}
+
+.car-item .car-extra {
+    flex: 1;
+    border-left: 2px solid #22040480;
+    padding-left: 20px;
+    grid-column: 2;
+}
+
+.car-item img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.car-item img:hover {
+    transform: scale(7.0);
+}
+
+#search-button {
+    padding: 8px 16px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#search-button:hover {
+    background-color: #059669;
+}
+
+.popup1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    border: 2px solid #07e907;
+}
+
+.popup {
+    display: none; /* Ẩn popup mặc định */
+    position: fixed;
+    z-index: 1000;
+    top: 70%;
+    left: 91%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9; /* Nền sáng */
+    color: #333; /* Màu chữ tối */
+    border: 2px solid #007bff; /* Viền xanh dương */
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    width: 300px;
+    text-align: center;
+    
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #d0021b; /* Màu đỏ cho nút đóng */
+}
+
+.popup-content .close:hover {
+    color: #b00015; /* Đổi màu khi hover */
+}
+
+.order-button {
+    background-color: #fb923c;
+}
+
+.order-button:hover {
+    background-color: #f97316;
+}
+
+.submit-btn {
+    background-color: #d0021b;
+}
+
+.submit-btn:hover {
+    background-color: #b00015;
+}
+
+.special-price {
+    color: #fb923c;
+    border: 2px solid #fb923c;
+    background-color: rgba(251, 146, 60, 0.1);
+}
+
+.phone-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.popup-content .close:hover {
+    color: #000;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1; /* Hiển thị chữ */
+    }
+    50% {
+        opacity: 0; /* Ẩn chữ */
+    }
+    100% {
+        opacity: 1; /* Hiển thị lại chữ */
+    }
+}
+
+.blinking-price {
+    animation: blink 1s infinite; /* Áp dụng hiệu ứng chớp nháy */
+    color: rgb(10, 228, 28); /* Màu chữ (tùy chỉnh) */
+    font-weight: bold; /* Làm chữ đậm */
+}
+.blinking {
+    animation: blink 1s infinite; /* Dừng hiệu ứng khi hover */
+    color: #FF5722; /* Màu chữ khi hover (tùy chỉnh) */
+    font-weight: bold; /* Làm chữ đậm */
+
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: -60px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: #0055aa;
+    transform: translateY(-3px);
+}
+
+.order-button {
+    position: fixed;
+    bottom: 10%;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+}
+
+.order-button:hover {
+    background-color: #E64A19;
+    transform: scale(1.8);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.order-button:active {
+    transform: scale(0.95);
+}
+
+.order-icon {
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.order-text {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 2px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 5px;
+}
+
+.order-button:hover .order-text {
+    opacity: 1;
+}
+
+.order-button:hover .order-icon {
+    transform: translateY(-8px);
+}
+
+.khung {
+    padding: 350px;
+    background: linear-gradient(to right, #1e3a8a, #00c2ff);
+    color: white;
+}
+
+.order-container {
+    max-width: 7700px;
+    margin-top: -700 px;
+    margin: -20%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #bdacac;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    color: #fcd34d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-btn {
+    background-color: #d0021b;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #b00015;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.ad-left,
+.ad-right {
+    position: fixed; /* Cố định vị trí */
+    top: 32%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Dịch chuyển để căn giữa */
+    z-index: 1; /* Đảm bảo quảng cáo nằm trên nội dung */
+}
+
+.ad-left {
+    left: 1px; /* Cách mép trái 10px */
+    size: 100px; /* Kích thước quảng cáo (tùy chỉnh) */
+    height: 100px; /* Kích thước quảng cáo (tùy chỉnh) */
+    
+}
+
+.ad-right {
+    right: 1px; /* Cách mép trái 10px */
+    size: 100px; /* Kích thước quảng cáo (tùy chỉnh) */
+    height: 100px;
+}
+
+.ad-left img,
+.ad-right img {
+    width: 290px; /* Tăng kích thước chiều rộng */
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    border: none; /* Viền quảng cáo (tùy chọn) */
+    border-radius: 5px; /* Bo góc (tùy chọn) */
+    box-shadow: none; /* Hiệu ứng đổ bóng */
+}
+.special-price {
+    color: #FF5722; /* Màu chữ */
+    font-weight: bold; /* Làm chữ đậm */
+    font-size: 14px; /* Kích thước chữ */
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    border: 2px solid #FF5722(0, 255, 21); /* Viền màu đỏ */
+    border-radius: 5px; /* Bo góc viền */
+    background-color: #FF5722(43, 255, 0, 0.1); /* Nền mờ */
+    display: inline-block; /* Đảm bảo viền bao quanh chữ */
+    animation: pulse 1.5s infinite; /* Hiệu ứng động */
+}
+
+/* Hiệu ứng động (tùy chọn) */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+}
+.header-flex {
+    display: flex; /* Sắp xếp các phần tử con trên 1 hàng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Đẩy các phần tử ra 2 bên */
+    position: relative;
+    padding: 1px 30px 1px 30px; /* Padding trái/phải cho đẹp */
+}
+
+.header-flex h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header-phone {
+    display: flex; /* Căn các phần tử con nằm ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 6px; /* Khoảng cách giữa icon và số điện thoại */
+    margin-top: 8px; /* Cách phía trên 8px */
+    position: absolute; /* Đặt vị trí tuyệt đối trong header */
+    top: 12px; /* Cách phía trên 8px */
+    left: 300px; /* Cách mép phải 40px (giảm giá trị để dịch sang trái) */
+    z-index: 10; /* Đảm bảo nổi trên nền header */
+}
+
+.phone-icon {
+    font-size: 18px;
+    color: #222;
+}
+
+.phone-link {
+    font-size: 18px;
+    color:#facc15;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
