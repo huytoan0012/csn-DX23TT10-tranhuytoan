@@ -33,10 +33,11 @@ nav ul li a {
 }
 
 .banner {
-    padding: 50px 20px;
+    padding: 7px 20px;
     background: linear-gradient(to right, #007bff, #00c2ff);
     color: white;
     text-align: center;
+    
 }
 
 .banner h2 {
@@ -83,6 +84,7 @@ nav ul li a {
 .car-item .car-info {
     flex: 1;
     grid-column: 1;
+   
 }
 
 .car-item .car-extra {
@@ -182,10 +184,15 @@ nav ul li a {
 
 .special-price {
     color: #fb923c;
-    border: 2px solid #fb923c;
+    border: 3px solid #fb923c;
     background-color: rgba(251, 146, 60, 0.1);
 }
+.blinking {
+    animation: blink 1s infinite;
+    color: #FF5722; 
+    font-weight: bold;
 
+}
 .phone-link:hover {
     color: #2563eb;
     text-decoration: underline;
@@ -223,12 +230,7 @@ nav ul li a {
     color: rgb(10, 228, 28); 
     font-weight: bold; 
 }
-.blinking {
-    animation: blink 1s infinite;
-    color: #FF5722; 
-    font-weight: bold;
 
-}
 
 .back-to-top {
     position: fixed;
@@ -430,7 +432,7 @@ h1 {
     animation: pulse 1.5s infinite; 
 }
 
-/* Hiệu ứng động (tùy chọn) */
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
@@ -481,4 +483,17 @@ h1 {
 .phone-link:hover {
     color: #007bff;
     text-decoration: underline;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
 }
